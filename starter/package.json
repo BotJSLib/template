@@ -5,6 +5,7 @@
 	"main": "src/index.ts",
 	"license": "MIT",
 	"dependencies": {
+		"@discordx/importer": "^1.3.0",
 		"botjs": "link:../../bot",
 		"dotenv": "^16.4.1",
 		"tsx": "^4.7.0",
