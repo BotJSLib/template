@@ -1,6 +1,6 @@
-import { Command } from "botjs/src/decorators/command";
+import { Command } from "botjs/src/decorators/command.js";
 
-class Ping {
+export class Ping {
   @Command("ping", "Pong!")
   ping() {
     return "Pong!";

@@ -1,15 +1,19 @@
-import { Platform } from "botjs";
-import BotManager from "botjs/src/manager";
-import "dotenv/config";
+import { Platform } from "botjs/src/bot.js";
+import BotManager from "botjs/src/manager.js";
 import { dirname, isESM } from "@discordx/importer";
-import MetadataStorage from "botjs/src/storage/metadata";
+import "dotenv/config";
 
 const manager = new BotManager();
 
 manager.create(process.env.DISCORD_TOKEN!, Platform.Discord);
 manager.create(process.env.TELEGRAM_TOKEN!, Platform.Telegram);
 
-manager.start().then(() => {
-  const folder = isESM() ? dirname(import.meta.url) : __dirname;
-  manager.loadFiles(folder).then(() => {});
-});
+const folder = isESM() ? dirname(import.meta.url) : __dirname;
+
+if (process.env.BOTJS_WATCH === "true") {
+  manager.startDev(folder);
+} else {
+  manager.start().then(() => {
+    manager.loadFiles(folder).then(() => {});
+  });
+}
