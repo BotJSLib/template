@@ -1,7 +1,8 @@
-import { Command } from "botjs/src/decorators/command.js";
+import { Command } from "botjs";
 
 export class Ping {
-  @Command("ping", "Pong!")
+  // When someone sends the /ping command, send a pong message
+  @Command("ping", "Send pong!")
   ping() {
     return "Pong!";
   }

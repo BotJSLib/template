@@ -12,6 +12,11 @@
 
 ### 🏠 [Homepage](https://github.com/Michelo11/botjs)
 
+## Available templates
+- blank
+- starter
+- complete
+
 ## Creating a new bot
 
 ```sh
