@@ -1,5 +1,5 @@
 import { dirname, isESM } from "@discordx/importer";
-import { BotManager, Platform } from "botjs";
+import { BotManager, Platform } from "@michelo11/botjs";
 import "dotenv/config";
 
 const manager = new BotManager();

@@ -4,7 +4,7 @@ import {
   MessageBuilder,
   SelectMenuOption,
   SelectMenu,
-} from "botjs";
+} from "@michelo11/botjs";
 
 export class MenuCommand {
   // On the /menu command, send a message with a select menu

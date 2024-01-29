@@ -1,4 +1,4 @@
-import { User, MessageBuilder, Event } from "botjs";
+import { User, MessageBuilder, Event } from "@michelo11/botjs";
 
 export class Message {
 
