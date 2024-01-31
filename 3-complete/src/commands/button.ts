@@ -1,4 +1,10 @@
-import { Command, User, MessageBuilder, Button, ButtonBuilder } from "@michelo11/botjs";
+import {
+  Command,
+  User,
+  MessageBuilder,
+  Button,
+  ButtonBuilder,
+} from "@michelo11/botjs";
 
 export class ButtonCommand {
   // On the /button command, send a message with a button
