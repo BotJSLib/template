@@ -13,6 +13,11 @@ manager.create(process.env.SLACK_TOKEN!, Platform.Slack, {
   token: process.env.SLACK_TOKEN!,
   port: 3000,
 });
+manager.create(process.env.WHATSAPP_TOKEN!, Platform.Whatsapp, {
+  sid: process.env.TWILIO_SID!,
+  port: 3000,
+  number: process.env.WHATSAPP_NUMBER!,
+});
 
 // Load all files in this folder
 const folder = isESM() ? dirname(import.meta.url) : __dirname;
