@@ -18,6 +18,11 @@ manager.create(process.env.WHATSAPP_TOKEN!, Platform.Whatsapp, {
   port: 3000,
   number: process.env.WHATSAPP_NUMBER!,
 });
+manager.create(process.env.TWITCH_ACCESS_TOKEN!, Platform.Twitch, {
+  channels: [process.env.TWITCH_CHANNEL!],
+  username: process.env.TWITCH_CHANNEL!,
+  clientId: process.env.TWITCH_CLIENT_ID!,
+})
 
 // Load all files in this folder
 const folder = isESM() ? dirname(import.meta.url) : __dirname;
