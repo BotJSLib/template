@@ -11,7 +11,7 @@ manager.create(process.env.SLACK_TOKEN!, Platform.Slack, {
   signingSecret: process.env.SLACK_SIGNING_SECRET!,
   appToken: process.env.SLACK_SOCKETS!,
   token: process.env.SLACK_TOKEN!,
-  port: 3000,
+  port: 3001,
 });
 manager.create(process.env.WHATSAPP_TOKEN!, Platform.Whatsapp, {
   sid: process.env.TWILIO_SID!,
