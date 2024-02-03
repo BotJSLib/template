@@ -1,11 +1,11 @@
-import { User, MessageBuilder, Event } from "@michelo11/botjs";
+import { User, MessageBuilder, Message, Event } from "@michelo11/botjs";
 
-export class Message {
+export class MessageListener {
 
   // When someons sends the ping message, send a pong message
   @Event("message")
-  async message(user: User, content: string) {
-    if (content === "ping") {
+  async message(user: User, message: Message) {
+    if (message.content === "ping") {
       await user.send(new MessageBuilder("pong"));
     }
   }

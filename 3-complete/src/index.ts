@@ -22,7 +22,15 @@ manager.create(process.env.TWITCH_ACCESS_TOKEN!, Platform.Twitch, {
   channels: [process.env.TWITCH_CHANNEL!],
   username: process.env.TWITCH_CHANNEL!,
   clientId: process.env.TWITCH_CLIENT_ID!,
-})
+});
+manager.create("", Platform.Reddit, {
+  userAgent: "MyBot/1.0.0",
+  clientId: process.env.REDDIT_CLIENT_ID!,
+  clientSecret: process.env.REDDIT_CLIENT_SECRET!,
+  username: process.env.REDDIT_USERNAME!,
+  password: process.env.REDDIT_PASSWORD!,
+  subs: ["test"]
+});
 
 // Load all files in this folder
 const folder = isESM() ? dirname(import.meta.url) : __dirname;
